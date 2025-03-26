@@ -10,8 +10,10 @@ const server = http.createServer((req, res) => {
   if(method === 'POST' && url === '/users') {
     return res.end('Criação de usuário');
   }
-
-  return res.end('Hello World');
+  else{
+    return res.end('Hello World');
+  }
+  
 });
 
 server.listen(3333)
