@@ -17,8 +17,7 @@ const webStream = Readable.toWeb(new OneToHundredStream());
 
 fetch('http://localhost:3334', {
   method: 'POST',
-  body: webStream,
-  duplex: 'half',
+  body: webStream
 }).then( response => {
   return response.text()
 }).then(data=> {
